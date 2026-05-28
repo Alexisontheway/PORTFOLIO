@@ -183,7 +183,7 @@ export const experience = [
   {
     role: 'Technical Intern (AI & Technical Writing Operations)',
     company: 'GAOTek Inc.',
-    location: 'Remote — New York, USA',
+    location: 'Remote — Kolkata, India',
     period: 'August 2025 – November 2025',
     type: 'Internship',
     description:
@@ -200,19 +200,21 @@ export const experience = [
 
 export const certifications = [
   {
+    title: "CS50's Introduction to Computer Science",
+    issuer: 'HarvardX (edX)',
+    year: '2024',
+    icon: Code2,
+    color: 'from-emerald-500 to-cyan-500',
+  },
+
+  {
     title: "CS50's Introduction to Artificial Intelligence with Python",
     issuer: 'HarvardX (edX)',
     year: '2024',
     icon: Brain,
     color: 'from-blue-500 to-purple-600',
   },
-  {
-    title: "CS50's Introduction to Programming with Python",
-    issuer: 'HarvardX (edX)',
-    year: '2024',
-    icon: Code2,
-    color: 'from-emerald-500 to-cyan-500',
-  },
+  
   {
     title: 'Software Engineering',
     issuer: 'NPTEL (IIT Kharagpur)',
