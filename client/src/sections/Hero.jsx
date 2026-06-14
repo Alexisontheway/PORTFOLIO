@@ -65,13 +65,33 @@ export default function Hero() {
           style={{ animationDelay: '0.8s', opacity: 0 }}
         >
           {[
-            { icon: Github, href: personalInfo.github },
-            { icon: Linkedin, href: personalInfo.linkedin },
-            { icon: Mail, href: `mailto:${personalInfo.email}` },
-          ].map(({ icon: Icon, href }, i) => (
-            <a
-              key={i}
-              href={href}
+  {
+    icon: Github,
+    href: personalInfo.github,
+    label: 'GitHub Profile'
+  },
+  {
+    icon: Linkedin,
+    href: personalInfo.linkedin,
+    label: 'LinkedIn Profile'
+  },
+  {
+    icon: Mail,
+    href: `mailto:${personalInfo.email}`,
+    label: 'Send Email'
+  },
+].map(({ icon: Icon, href, label }, i) => (
+  <a
+    key={i}
+    href={href}
+    aria-label={label}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-600 hover:text-neon transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(234,255,0,0.5)]"
+  >
+    <Icon size={20} />
+  </a>
+))
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-neon transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(234,255,0,0.5)]"
