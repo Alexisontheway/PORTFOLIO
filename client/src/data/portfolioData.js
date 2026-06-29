@@ -141,7 +141,7 @@ export const projects = [
       'Batch processing for large-scale datasets',
     ],
     github: 'https://github.com/Alexisontheway', // TODO: replace with actual repo URL
-    demo: 'https://intelligent-data-cleaning-tool.onrender.com',
+    demo: 'https://intelligent-data-cleaning-tool.onrender.com/',
     featured: true,
     category: 'automation',
   },
