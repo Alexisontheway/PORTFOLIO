@@ -48,33 +48,12 @@ export default function Contact() {
 
             <div className="flex gap-4">
               {[
-  {
-    icon: Github,
-    href: personalInfo.github,
-    label: 'GitHub Profile'
-  },
-  {
-    icon: Linkedin,
-    href: personalInfo.linkedin,
-    label: 'LinkedIn Profile'
-  },
-  {
-    icon: Mail,
-    href: `mailto:${personalInfo.email}`,
-    label: 'Send Email'
-  },
-].map(({ icon: Icon, href, label }, i) => (
-  <a
-    key={i}
-    href={href}
-    aria-label={label}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-gray-600 hover:text-neon transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(234,255,0,0.5)]"
-  >
-    <Icon size={20} />
-  </a>
-))
+                { icon: Github, href: personalInfo.github },
+                { icon: Linkedin, href: personalInfo.linkedin },
+              ].map(({ icon: Icon, href }, i) => (
+                <a
+                  key={i}
+                  href={href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 border border-neon/20 flex items-center justify-center text-gray-500 hover:text-neon hover:border-neon hover:shadow-neon transition-all duration-300"
