@@ -3,91 +3,113 @@ import {
   Workflow,
   Lightbulb,
   Brain,
-  Layers,
+  Layers,Shield
 } from 'lucide-react';
 
-export const personalInfo = {
+const EMAIL = "priyanshualex@gmail.com";
+const LOCATION = 'Kolkata, India';
+const GITHUB = 'https://github.com/Alexisontheway';
+const LINKEDIN = 'https://linkedin.com/in/priyanshu-pramanik-422124245';
+
+
+export const personalInfo = Object.freeze({
   name: 'Priyanshu Pramanik',
-  title: 'Full-Stack Developer',
-  tagline: 'Building full-stack systems, automation pipelines, and AI integrations — architecture to deployment.',
-  location: 'Kolkata, India',
-  email: 'priyanshualex@gmail.com',
+  title: 'Software Engineer',
+  tagline: 'Building production-ready software, intelligent automation, and AI-powered systems from architecture to deployment.',
+  location: LOCATION,
+  email: EMAIL,
   phone: '+91 6204058150',
-  linkedin: 'https://linkedin.com/in/priyanshu-pramanik-422124245',
-  github: 'https://github.com/Alexisontheway',
+  linkedin: LINKEDIN,
+  github: GITHUB,
   resumeUrl: '/resume.pdf',
-};
+});
 
 export const aboutText = {
-  headline: 'Engineering solutions that actually work.',
+  headline: 'Engineering Reliable Software Systems.',
   paragraphs: [
     "I'm a Computer Science undergraduate focused on building end-to-end systems — from responsive frontends to resilient backends and automated workflows.",
     "My work spans full-stack web development, intelligent data processing, and workflow automation. I've built tools that clean messy datasets, automate lead generation, and streamline repetitive operations — with a focus on reliability and maintainability.",
     "I care about systems that are clean, performant, and production-ready — not just functional on localhost.",
   ],
   highlights: [
-    { label: 'Projects Built', value: '10+' },
-    { label: 'Technologies', value: '8+' },
     { label: 'Leads Generated Daily', value: '100+' },
     { label: 'Data Cleaning Time Saved', value: '85%' },
+    { label: 'End-to-End Application Development', value: "4+"}
   ],
 };
 
 export const skillCategories = [
   {
-    title: 'Technical Skills',
+    title: "Languages",
     icon: Code2,
+
     skills: [
-      'JavaScript / TypeScript',
-      'React.js',
-      'Node.js / Express',
-      'Python',
-      'PostgreSQL / MongoDB',
-      'REST API Design',
-      'FastAPI',
-      'HTML5 / CSS3 / Tailwind',
-      'Git & GitHub',
-      'MVC Architecture',
-      'Algorithms & Data Structures',
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "SQL",
     ],
   },
+
   {
-    title: 'Operations & Automation',
+    title: "Frontend",
+    icon: Layers,
+
+    skills: [
+      "React",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+    ],
+  },
+
+  {
+    title: "Backend",
     icon: Workflow,
+
     skills: [
-      'Workflow Design',
-      'Process Automation',
-      'Lead Generation',
-      'SaaS Tool Integration (Apollo, Clay, Thunderbird)',
-      'Data Cleaning & ETL',
-      'Structured Data Handling',
-      'Business Process Optimization',
-      'Email Campaign Automation',
+      "Node.js",
+      "Express.js",
+      "FastAPI",
+      "RESTful APIs",
+      "JWT",
+      "MVC Architecture",
     ],
   },
+
   {
-    title: 'Functional Skills',
-    icon: Lightbulb,
+    title: "Database",
+    icon: Brain,
+
     skills: [
-      'System Architecture',
-      'Problem Solving',
-      'Technical Documentation',
-      'Business Process Mapping',
-      'Requirements Gathering',
-      'API Integration',
-      'Stakeholder Communication',
-      'Cross-functional Collaboration',
+      "SQL",
+      "PostgreSQL",
+      "MongoDB",
+      "Neon PostgreSQL",
+    ],
+  },
+
+  {
+    title: "Tools & Platforms",
+
+    icon: Lightbulb,
+
+    skills: [
+      "Git",
+      "GitHub",
+      "Postman",
+      "Docker",
+      "VS Code",
     ],
   },
 ];
-
 export const projects = [
   {
-    id: 1,
-    title: 'Movie Recommender',
+    id: "movie-recommender",
+    title: 'Wanna Watch',
     subtitle: 'AI-Powered Movie Discovery Platform',
     description:
-      'A full-stack movie recommendation platform that combines Machine Learning with real-time TMDB integration to help users discover movies they\'ll actually enjoy. Features a hybrid ML engine processing 4,800+ movies using TF-IDF vectorization and cosine similarity, a 5-question personality quiz, user accounts with watchlist/favorites/ratings, and access to 800,000+ movies via TMDB.',
+      'A full-stack movie recommendation platform that combines machine learning with real-time TMDB integration.',
     impact: 'Hybrid ML + TMDB engine delivering personalized recommendations across 800,000+ movies with cosine similarity scoring, 100-point quiz algorithm, and real-time enrichment.',
     techStack: ['React', 'Node.js', 'Express', 'FastAPI', 'Python', 'scikit-learn', 'PostgreSQL', 'TMDB API', 'JWT Auth', 'Vercel', 'Render'],
     features: [
@@ -105,13 +127,33 @@ export const projects = [
     featured: true,
     category: 'ai',
   },
+   {
+    id: "data-cleaner",
+    title: 'CleanFlow',
+    subtitle: 'Automated Data Pipeline',
+    description:
+      'An automated pipeline that ingests raw datasets, identifies inconsistencies, removes duplicates, validates formats, and outputs clean, analysis-ready data. Built to handle messy real-world data efficiently with detailed reporting.',
+    impact: 'Automated ETL pipeline for validating, transforming, and standardizing structured datasets with real-time reporting.',
+    techStack: ['Python', 'FastAPI', 'Pandas', 'NumPy', 'Uvicorn', 'RESTful APIs'],
+    features: [
+      'Automated duplicate detection and removal',
+      'Format validation for emails, phones, and dates',
+      'Business-rule validation checks for schema consistency',
+      'Structured Excel reports for stakeholder review',
+      'Batch processing for large-scale datasets',
+    ],
+    github: 'https://github.com/Alexisontheway', 
+    demo: 'https://intelligent-data-cleaning-tool.onrender.com/',
+    featured: true,
+    category: 'automation',
+  },
   {
-    id: 2,
-    title: 'Daily Task App',
+    id: 'dailytaskapp',
+    title: 'TaskForce',
     subtitle: 'Full-Stack Productivity Platform',
     description:
       'A comprehensive task management application built with a modern full-stack architecture. Features real-time updates, priority-based organization, deadline tracking, and a clean dashboard interface designed for daily productivity workflows.',
-    impact: 'Designed with scalable MVC architecture handling 1000+ tasks with sub-second response times.',
+    impact: 'Designed using scalable MVC architecture with secure JWT authentication and PostgreSQL-backed persistence.',
     techStack: ['Node.js', 'Express', 'PostgreSQL', 'Vanilla JS', 'REST API', 'JWT Auth'],
     features: [
       'Priority-based task organization with smart sorting',
@@ -124,52 +166,13 @@ export const projects = [
     demo: null,
     featured: true,
     category: 'fullstack',
-  },
-  {
-    id: 3,
-    title: 'Intelligent Data Cleaning Tool',
-    subtitle: 'Automated Data Pipeline',
-    description:
-      'An automated pipeline that ingests raw datasets, identifies inconsistencies, removes duplicates, validates formats, and outputs clean, analysis-ready data. Built to handle messy real-world data at scale with detailed reporting.',
-    impact: 'Reduced manual data cleaning time by 85% across datasets with 10K+ records.',
-    techStack: ['Python', 'FastAPI', 'Pandas', 'NumPy', 'Uvicorn', 'REST API'],
-    features: [
-      'Automated duplicate detection and removal',
-      'Format validation for emails, phones, and dates',
-      'Business-rule validation checks for schema consistency',
-      'Structured Excel reports for stakeholder review',
-      'Batch processing for large-scale datasets',
-    ],
-    github: 'https://github.com/Alexisontheway', // TODO: replace with actual repo URL
-    demo: 'https://intelligent-data-cleaning-tool.onrender.com/',
-    featured: true,
-    category: 'automation',
-  },
-  {
-    id: 4,
-    title: 'AnalyseThis',
-    subtitle: 'AI-Powered Research & Reporting Assistant',
-    description:
-      'A multi-source aggregation tool that organizes research findings into traceable, structured reports with proper sourcing and formatting. Leverages AI models to generate actionable intelligence for faster and more informed decision-making.',
-    impact: 'Automated 70% of manual prospect research, delivering insights in seconds instead of hours.',
-    techStack: ['Python', 'OpenAI API', 'Web Scraping', 'Data Analysis', 'REST API'],
-    features: [
-      'Multi-source data aggregation and enrichment',
-      'AI-powered company and prospect profiling',
-      'Traceable structured reports with proper sourcing',
-      'Natural language query interface',
-      'Export-ready intelligence summaries',
-    ],
-    github: 'https://github.com/Alexisontheway', // TODO: replace with actual repo URL
-    demo: null,
-    featured: true,
-    category: 'ai',
-  },
-];
+  },]
+ 
+  ;
 
 export const experience = [
   {
-    role: 'Technical Intern — AI & Technical Writing Operations',
+    role: 'Technical Intern',
     company: 'GAOTek Inc.',
     location: 'Remote — Kolkata, India',
     period: 'August 2025 – November 2025',
@@ -186,30 +189,6 @@ export const experience = [
   },
 ];
 
-export const certifications = [
-  {
-    title: "CS50's Introduction to Computer Science",
-    issuer: 'HarvardX (edX)',
-    year: '2024',
-    icon: Code2,
-    color: 'from-emerald-500 to-cyan-500',
-  },
-  {
-    title: "CS50's Introduction to Artificial Intelligence with Python",
-    issuer: 'HarvardX (edX)',
-    year: '2024',
-    icon: Brain,
-    color: 'from-blue-500 to-purple-600',
-  },
-  {
-    title: 'Software Engineering',
-    issuer: 'NPTEL (IIT Kharagpur)',
-    year: '2024',
-    icon: Layers,
-    color: 'from-orange-500 to-red-500',
-  },
-];
-
 export const education = [
   {
     degree: 'Bachelor of Technology (B.Tech)',
@@ -217,7 +196,7 @@ export const education = [
     institution: 'Swami Vivekananda University',
     location: 'Kolkata, India',
     period: '2024 – 2027 (Expected)',
-    grade: 'CGPA: 8.17 / 10',
+    grade: 'CGPA: 8.89 / 10',
     type: 'Undergraduate',
   },
   {
@@ -231,6 +210,41 @@ export const education = [
   },
 ];
 
+
+export const certifications = [
+  {
+    title: "CS50's Introduction to Computer Science",
+    issuer: 'HarvardX (edX)',
+    year: '2024',
+    icon: Code2,
+    color: 'from-emerald-500 to-cyan-500',
+  },
+  {
+    title: 'Software Engineering',
+    issuer: 'NPTEL (IIT Kharagpur)',
+    year: '2024',
+    icon: Layers,
+    color: 'from-orange-500 to-red-500',
+  },
+  {
+    title: "CS50's Introduction to Artificial Intelligence with Python",
+    issuer: 'HarvardX (edX)',
+    year: '2025',
+    icon: Brain,
+    color: 'from-blue-500 to-purple-600',
+  },
+  {
+    title: "OSINT Using Python",
+    issuer: 'CyberVidyaPeeth',
+    year: '2023',
+    icon: Shield,
+    color: 'from-slate-500 to-indigo-600',
+  }
+  
+];
+
+
+  
 export const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
