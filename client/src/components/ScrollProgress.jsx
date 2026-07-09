@@ -7,17 +7,20 @@ export default function ScrollProgress() {
     const handleScroll = () => {
       const total = document.documentElement.scrollHeight - window.innerHeight;
       const current = window.scrollY;
-      setProgress(total > 0 ? (current / total) * 100 : 0);
+      setProgress(total > 0 ? current / total : 0);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <div className="fixed top-0 left-0 w-full h-[2px] z-[100]">
       <div
-        className="h-full bg-neon shadow-neon transition-all duration-150"
-        style={{ width: `${progress}%` }}
+        className="h-full bg-neon shadow-neon will-change-transform"
+        style={{
+          transform: `scaleX(${progress})`,
+          transformOrigin: 'left',
+        }}
       />
     </div>
   );

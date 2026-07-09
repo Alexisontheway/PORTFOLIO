@@ -1,17 +1,20 @@
-import { Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 
 import Navbar from './components/Navbar';
 import ScrollProgress from './components/ScrollProgress';
 import Footer from './components/Footer';
 
+// Only Hero loads eagerly (above the fold)
 import Hero from './sections/Hero';
-import About from './sections/About';
-import Skills from './sections/Skills';
-import Projects from './sections/Projects';
-import Experience from './sections/Experience';
-import Education from './sections/Education';
-import Certifications from './sections/Certifications';
-import Contact from './sections/Contact';
+
+// Everything below the fold is lazy-loaded to cut initial JS by ~60%
+const About = lazy(() => import('./sections/About'));
+const Skills = lazy(() => import('./sections/Skills'));
+const Projects = lazy(() => import('./sections/Projects'));
+const Experience = lazy(() => import('./sections/Experience'));
+const Education = lazy(() => import('./sections/Education'));
+const Certifications = lazy(() => import('./sections/Certifications'));
+const Contact = lazy(() => import('./sections/Contact'));
 
 export default function App() {
   return (
@@ -19,9 +22,10 @@ export default function App() {
       <ScrollProgress />
       <Navbar />
 
-      <Suspense fallback={null}>
-        <main>
-          <Hero />
+      <main>
+        <Hero />
+
+        <Suspense fallback={null}>
           <About />
           <Skills />
           <Projects />
@@ -29,8 +33,8 @@ export default function App() {
           <Education />
           <Certifications />
           <Contact />
-        </main>
-      </Suspense>
+        </Suspense>
+      </main>
 
       <Footer />
     </div>

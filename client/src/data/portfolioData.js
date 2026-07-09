@@ -175,7 +175,7 @@ export const projects = [
       'Responsive UI with dark/light mode support',
     ],
     github: 'https://github.com/Alexisontheway/Daily-Task-App',
-    demo: null,
+    demo: 'https://github.com/Alexisontheway/Daily-Task-App',
     featured: true,
     category: 'fullstack',
   },]

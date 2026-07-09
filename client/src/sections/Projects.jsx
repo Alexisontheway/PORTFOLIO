@@ -64,12 +64,12 @@ export default function Projects() {
 
                   <div className="flex gap-3">
                     {project.github && (
-                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-neon transition-colors">
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} GitHub repository`} className="text-gray-600 hover:text-neon transition-colors">
                         <Github size={18} />
                       </a>
                     )}
                     {project.demo && (
-                      <a href={project.demo} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-neon transition-colors">
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} live demo`} className="text-gray-600 hover:text-neon transition-colors">
                         <ExternalLink size={18} />
                       </a>
                     )}

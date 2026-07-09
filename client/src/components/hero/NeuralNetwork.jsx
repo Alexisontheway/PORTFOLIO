@@ -99,7 +99,7 @@ export default function NeuralNetwork({ compact = false }) {
 
         {/* Data packets traveling along traces */}
         {!compact &&
-          networkConnections.slice(0, 10).map((connection, index) => (
+          networkConnections.slice(0, 4).map((connection, index) => (
             <circle
               key={`${connection.from}-${connection.to}-packet`}
               r={0.65}
