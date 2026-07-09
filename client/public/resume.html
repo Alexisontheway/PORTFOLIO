@@ -6,19 +6,24 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
 
+    @page {
+      size: letter;
+      margin: 0; /* Setting margin to 0 removes default browser header (file path) and footer (page number/date) */
+    }
+
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: #111111;
       line-height: 1.4;
       margin: 0;
-      padding: 0;
-      font-size: 10pt; /* slightly smaller to fit 1 page comfortably */
+      padding: 0.5in; /* Adds padding inside the page since page margins are set to 0 */
+      font-size: 10pt;
     }
 
     .resume-container {
-      max-width: 8.5in;
-      margin: 0.4in auto;
-      padding: 0 0.5in;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
     }
 
     header {
@@ -179,6 +184,7 @@
       body {
         background: #ffffff;
         color: #000000;
+        padding: 0.5in;
       }
       .resume-container {
         margin: 0;
