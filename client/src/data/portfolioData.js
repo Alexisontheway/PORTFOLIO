@@ -21,7 +21,7 @@ export const personalInfo = Object.freeze({
   phone: '+91 6204058150',
   linkedin: LINKEDIN,
   github: GITHUB,
-  resumeUrl: '/resume.pdf',
+  resumeUrl: '/resume.pdf?v=' + new Date().getTime(),
 });
 
 export const systemProfile = Object.freeze({
