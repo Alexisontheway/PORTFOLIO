@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { submitContact, getContacts } from '../controllers/contactController.js';
+import { submitContact } from '../controllers/contactController.js';
 import { contactLimiter } from '../middleware/rateLimiter.js';
 import { contactValidationRules, validate } from '../middleware/validator.js';
 
@@ -14,7 +14,8 @@ router.post(
   submitContact
 );
 
-// GET /api/contact — List messages (admin)
-router.get('/', getContacts);
+// GET /api/contact — Removed for security.
+// View submissions directly in the database (Neon SQL console).
+
 
 export default router;

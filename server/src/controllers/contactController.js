@@ -1,4 +1,4 @@
-import { createContact, getAllContacts, getContactCount } from '../models/contactModel.js';
+import { createContact } from '../models/contactModel.js';
 import { sendContactNotification } from '../utils/mailer.js';
 
 /**
@@ -12,8 +12,11 @@ export async function submitContact(req, res) {
     // Save to database
     const contact = await createContact({ name, email, message });
 
-    // Send email notification (non-blocking)
-    sendContactNotification({ name, email, message }).catch(() => {});
+      // Send email notification (non-blocking, but log any failures)
+    sendContactNotification({ name, email, message }).catch((err) => {
+      console.error('Email notification failed for contact', contact.id, ':', err.message);
+    });
+
 
     res.status(201).json({
       success: true,
@@ -32,36 +35,3 @@ export async function submitContact(req, res) {
   }
 }
 
-/**
- * GET /api/contact
- * Fetch all contact messages (admin endpoint)
- */
-export async function getContacts(req, res) {
-  try {
-    const page = parseInt(req.query.page) || 1;
-    const limit = Math.min(parseInt(req.query.limit) || 20, 100);
-    const offset = (page - 1) * limit;
-
-    const [contacts, total] = await Promise.all([
-      getAllContacts(limit, offset),
-      getContactCount(),
-    ]);
-
-    res.json({
-      success: true,
-      data: contacts,
-      pagination: {
-        page,
-        limit,
-        total,
-        totalPages: Math.ceil(total / limit),
-      },
-    });
-  } catch (error) {
-    console.error('Fetch contacts error:', error);
-    res.status(500).json({
-      success: false,
-      message: 'Failed to fetch messages.',
-    });
-  }
-}

@@ -12,7 +12,6 @@ export default function ParticleBackground() {
           background: 'rgba(234, 255, 0, 0.04)',
           filter: 'blur(120px)',
           animation: 'floatOrb 10s ease-in-out infinite',
-          willChange: 'transform',
         }}
       />
       <div
@@ -26,7 +25,6 @@ export default function ParticleBackground() {
           background: 'rgba(234, 255, 0, 0.025)',
           filter: 'blur(100px)',
           animation: 'floatOrb 14s ease-in-out infinite reverse',
-          willChange: 'transform',
         }}
       />
       <div
@@ -40,9 +38,8 @@ export default function ParticleBackground() {
           background: 'rgba(234, 255, 0, 0.02)',
           filter: 'blur(80px)',
           animation: 'floatOrb 18s ease-in-out infinite',
-          willChange: 'transform',
         }}
       />
     </div>
-  );
+  )
 }

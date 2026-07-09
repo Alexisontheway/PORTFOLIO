@@ -24,6 +24,18 @@ export const personalInfo = Object.freeze({
   resumeUrl: '/resume.pdf',
 });
 
+export const systemProfile = Object.freeze({
+  status: 'Available',
+  location: LOCATION,
+  focusAreas: ['Full-Stack Systems', 'Intelligent Automation', 'AI Engineering'],
+  currentStack: ['React', 'Node.js', 'FastAPI', 'PostgreSQL', 'Python', 'Docker'],
+  highlights: [
+    { value: '4+', label: 'Applications' },
+    { value: '100+', label: 'Leads / Day' },
+    { value: '8.89', label: 'CGPA' },
+  ],
+});
+
 export const aboutText = {
   headline: 'Engineering Reliable Software Systems.',
   paragraphs: [

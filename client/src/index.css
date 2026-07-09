@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background-color: #0A0A0A;
+  background-color: #000000;
   color: #ffffff;
   font-family: 'Inter', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -24,7 +24,7 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0A0A0A;
+  background: #000000;
 }
 ::-webkit-scrollbar-thumb {
   background: #EAFF00;
@@ -32,16 +32,19 @@ body {
 }
 
 ::selection {
-  background: rgba(234, 255, 0, 0.3);
-  color: #EAFF00;
+  background: rgba(234, 255, 0, 0.24);
+  color: #FFFFFF;
 }
 
 @layer utilities {
   .text-glow {
     text-shadow: 0 0 10px rgba(234, 255, 0, 0.5), 0 0 30px rgba(234, 255, 0, 0.2);
   }
+  .text-glow-subtle {
+    text-shadow: 0 0 14px rgba(234, 255, 0, 0.22), 0 0 40px rgba(234, 255, 0, 0.08);
+  }
   .border-glow {
-    box-shadow: 0 0 5px rgba(234, 255, 0, 0.3), inset 0 0 5px rgba(234, 255, 0, 0.1);
+    box-shadow: 0 0 8px rgba(234, 255, 0, 0.16), inset 0 0 8px rgba(234, 255, 0, 0.04);
   }
   .neon-line {
     background: linear-gradient(90deg, transparent, #EAFF00, transparent);
@@ -56,20 +59,72 @@ body {
   }
   .grid-bg {
     background-image:
-      linear-gradient(rgba(234, 255, 0, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(234, 255, 0, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(234, 255, 0, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(234, 255, 0, 0.02) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 }
+
+/* ── Neural Network Animations ── */
+
+.network-node {
+  animation: networkBreathe 5.8s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.network-node-glow {
+  animation: networkGlow 6.5s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes networkBreathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.18); }
+}
+
+@keyframes networkGlow {
+  0%, 100% { transform: scale(0.92); opacity: 0.06; }
+  50% { transform: scale(1.4); opacity: 0.16; }
+}
+
+/* ── Circuit trace pulse ── */
+
+@keyframes tracePulse {
+  0%, 100% { stroke-opacity: 0.12; }
+  50% { stroke-opacity: 0.3; }
+}
+
+.circuit-trace {
+  animation: tracePulse 4s ease-in-out infinite;
+}
+
+/* ── Data packet travel ── */
+
+@keyframes packetGlow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.data-packet {
+  animation: packetGlow 2s ease-in-out infinite;
+}
+
+/* ── Background orbs ── */
+
 @keyframes floatOrb {
-  0%,
-  100% {
-    transform: translateY(0px) translateX(0px);
-  }
-  33% {
-    transform: translateY(-40px) translateX(25px);
-  }
-  66% {
-    transform: translateY(25px) translateX(-20px);
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  33% { transform: translateY(-40px) translateX(25px); }
+  66% { transform: translateY(25px) translateX(-20px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .network-node,
+  .network-node-glow,
+  .circuit-trace,
+  .data-packet,
+  animateMotion {
+    animation: none;
   }
 }
