@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Priyanshu Pramanik — Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #111111;
+      line-height: 1.4;
+      margin: 0;
+      padding: 0;
+      font-size: 11pt;
+    }
+
+    .resume-container {
+      max-width: 8.5in;
+      margin: 0.5in auto;
+      padding: 0 0.5in;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 24pt;
+      margin: 0 0 5px 0;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .title-sub {
+      font-size: 13pt;
+      font-weight: 600;
+      color: #333333;
+      margin-bottom: 8px;
+    }
+
+    .contact-info {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9pt;
+      color: #555555;
+      margin-bottom: 10px;
+    }
+
+    .contact-info a {
+      color: #555555;
+      text-decoration: none;
+      border-bottom: 1px solid #cccccc;
+    }
+
+    .contact-info a:hover {
+      color: #000000;
+      border-color: #000000;
+    }
+
+    hr.divider {
+      border: 0;
+      height: 1px;
+      background: #dddddd;
+      margin: 15px 0;
+    }
+
+    h2.section-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11pt;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 15px 0 8px 0;
+      color: #000000;
+      border-bottom: 1px solid #111111;
+      padding-bottom: 3px;
+    }
+
+    .summary {
+      font-size: 10.5pt;
+      color: #222222;
+      text-align: justify;
+    }
+
+    .skills-list {
+      font-size: 10pt;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .skills-list li {
+      margin-bottom: 6px;
+    }
+
+    .skills-list strong {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #000000;
+      display: inline-block;
+      width: 170px;
+    }
+
+    .job-entry, .project-entry, .education-entry {
+      margin-bottom: 12px;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: 600;
+      font-size: 11pt;
+      margin-bottom: 4px;
+    }
+
+    .entry-company {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #000000;
+    }
+
+    .entry-title {
+      font-style: italic;
+      color: #444444;
+      font-weight: 500;
+    }
+
+    .entry-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9pt;
+      color: #555555;
+      font-weight: 500;
+    }
+
+    .entry-tech {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8.5pt;
+      color: #666666;
+      margin-bottom: 4px;
+    }
+
+    ul.bullets {
+      margin: 0;
+      padding-left: 20px;
+      font-size: 10pt;
+      color: #333333;
+    }
+
+    ul.bullets li {
+      margin-bottom: 4px;
+    }
+
+    .certifications-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      font-size: 10pt;
+    }
+
+    .cert-item {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .cert-title {
+      font-weight: 600;
+    }
+
+    .cert-issuer {
+      color: #555555;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9pt;
+    }
+
+    /* Print styling */
+    @media print {
+      body {
+        background: #ffffff;
+        color: #000000;
+      }
+      .resume-container {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+      }
+      hr.divider {
+        background: #000000;
+      }
+      h2.section-title {
+        border-bottom: 1.5px solid #000000;
+      }
+      .entry-date, .contact-info, .entry-tech, .cert-issuer {
+        color: #000000;
+      }
+      ul.bullets li {
+        color: #000000;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="resume-container">
+  <header>
+    <h1>Priyanshu Pramanik</h1>
+    <div class="title-sub">Software Engineer</div>
+    <div class="contact-info">
+      Kolkata, India | +91 6204058150 | <a href="mailto:priyanshualex@gmail.com">priyanshualex@gmail.com</a><br>
+      <a href="https://portfolio-de9q.onrender.com" target="_blank">Portfolio</a> | 
+      <a href="https://linkedin.com/in/priyanshu-pramanik-422124245" target="_blank">LinkedIn</a> | 
+      <a href="https://github.com/Alexisontheway" target="_blank">GitHub</a>
+    </div>
+  </header>
+
+  <hr class="divider">
+
+  <h2 class="section-title">Professional Summary</h2>
+  <div class="summary">
+    Passionate and result-oriented Software Engineer with a solid foundation in computer science and hands-on experience building full-stack web applications, automated data pipelines, and AI-enabled software systems. Skilled in Python, JavaScript/TypeScript, React, Node.js, and relational database systems (PostgreSQL, MySQL). Strong track record of designing reliable architectures, optimizing performance, and integrating intelligent automation to deliver production-ready software solutions.
+  </div>
+
+  <h2 class="section-title">Core Technical Skills</h2>
+  <ul class="skills-list">
+    <li><strong>Languages:</strong> Python, JavaScript, TypeScript, SQL (PostgreSQL, MySQL), HTML5, CSS3</li>
+    <li><strong>Frontend:</strong> React, React 19, Tailwind CSS, DOM Manipulation, Responsive UI</li>
+    <li><strong>Backend &amp; APIs:</strong> Node.js, Express.js, FastAPI, RESTful APIs, JWT Authentication, MVC Architecture</li>
+    <li><strong>Databases:</strong> PostgreSQL (Neon), MySQL (schema design, indexing), MongoDB</li>
+    <li><strong>Tools &amp; Platforms:</strong> Git, GitHub, Docker, Postman, VS Code, Render, Vercel</li>
+    <li><strong>Intelligent Auto:</strong> ETL Pipelines, Data Validation (Pandas, NumPy), Lead Generation (Apollo, Clay)</li>
+  </ul>
+
+  <h2 class="section-title">Professional Experience</h2>
+  <div class="job-entry">
+    <div class="entry-header">
+      <div>
+        <span class="entry-company">GAOTek Inc.</span> — <span class="entry-title">Technical Intern</span>
+      </div>
+      <span class="entry-date">Aug 2025 – Nov 2025</span>
+    </div>
+    <ul class="bullets">
+      <li>Engineered an automated product documentation workflow to catalog 120+ SaaS/Automation products, reducing manual database input errors by over 20%.</li>
+      <li>Integrated Apollo, Clay, and Thunderbird to design a unified lead generation pipeline, generating 100+ qualified leads daily.</li>
+      <li>Built and scaled email outreach campaigns using SMTP automation, maintaining database accuracy for follow-ups.</li>
+    </ul>
+  </div>
+
+  <h2 class="section-title">Projects</h2>
+  
+  <div class="project-entry">
+    <div class="entry-header">
+      <div>
+        <span class="entry-company">Wanna Watch</span> — <span class="entry-title">AI-Powered Movie Discovery Platform</span>
+      </div>
+      <span class="entry-date">React, Node, FastAPI, ML</span>
+    </div>
+    <div class="entry-tech">Tech Stack: React 19, Node.js, FastAPI, Python, scikit-learn, PostgreSQL, Vercel, Render</div>
+    <ul class="bullets">
+      <li>Designed a hybrid recommendation engine combining Content-Based Filtering (TF-IDF &amp; Cosine Similarity) on a custom dataset with real-time TMDB API lookups.</li>
+      <li>Formulated a 5-question personality quiz algorithm to output dynamic user matching scores, increasing user engagement.</li>
+      <li>Developed full-stack user services featuring secure JWT authentication, stateful favorites/watchlists, and responsive lazy-loaded sections.</li>
+      <li>Orchestrated a microservices-based deployment utilizing Vercel for frontend and Render for backend and machine learning microservices.</li>
+    </ul>
+  </div>
+
+  <div class="project-entry">
+    <div class="entry-header">
+      <div>
+        <span class="entry-company">CleanFlow</span> — <span class="entry-title">Automated Data Pipeline</span>
+      </div>
+      <span class="entry-date">Python, FastAPI, ETL</span>
+    </div>
+    <div class="entry-tech">Tech Stack: Python, FastAPI, Pandas, NumPy, RESTful APIs, Excel Reporting</div>
+    <ul class="bullets">
+      <li>Engineered a robust ETL data cleaning pipeline to ingest, validate, and standardize messy real-world datasets, saving up to 85% of manual cleaning time.</li>
+      <li>Implemented business-rule validation checks for format accuracy (emails, phone numbers, dates) and schema consistency.</li>
+      <li>Programmed a reporting system that generates structured Excel summary reports mapping data anomalies for stakeholder review.</li>
+    </ul>
+  </div>
+
+  <div class="project-entry">
+    <div class="entry-header">
+      <div>
+        <span class="entry-company">TaskForce</span> — <span class="entry-title">Full-Stack Productivity Platform</span>
+      </div>
+      <span class="entry-date">Node, Express, PostgreSQL, MySQL</span>
+    </div>
+    <div class="entry-tech">Tech Stack: Node.js, Express, PostgreSQL, MySQL, Vanilla JS, REST API, JWT</div>
+    <ul class="bullets">
+      <li>Overhauled a legacy task application into a high-performance, dark-themed brutalist UI featuring modular layout blocks and custom CSS typography.</li>
+      <li>Scaled an MVC-based backend utilizing Express, optimizing database queries and connection pools across PostgreSQL and MySQL database instances.</li>
+      <li>Implemented token-based authentication (JWT) and secure input validation to enforce server-side security.</li>
+    </ul>
+  </div>
+
+  <h2 class="section-title">Education</h2>
+  
+  <div class="education-entry">
+    <div class="entry-header">
+      <div>
+        <span class="entry-company">Swami Vivekananda University</span> — <span class="entry-title">B.Tech in Computer Science &amp; Engineering</span>
+      </div>
+      <span class="entry-date">2024 – 2027 (Expected)</span>
+    </div>
+    <ul class="bullets">
+      <li>Grade: CGPA: <strong>8.89 / 10.0</strong></li>
+    </ul>
+  </div>
+
+  <div class="education-entry">
+    <div class="entry-header">
+      <div>
+        <span class="entry-company">Government Polytechnic Khutri</span> — <span class="entry-title">Diploma in Computer Engineering</span>
+      </div>
+      <span class="entry-date">2021 – 2024</span>
+    </div>
+    <ul class="bullets">
+      <li>Grade: <strong>Distinction</strong></li>
+    </ul>
+  </div>
+
+  <h2 class="section-title">Certifications</h2>
+  <div class="certifications-grid">
+    <div class="cert-item">
+      <span class="cert-title">CS50's Introduction to AI with Python</span>
+      <span class="cert-issuer">HarvardX (2025)</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-title">CS50's Introduction to Computer Science</span>
+      <span class="cert-issuer">HarvardX (2024)</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-title">Software Engineering</span>
+      <span class="cert-issuer">NPTEL / IIT Kharagpur (2024)</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-title">OSINT Using Python</span>
+      <span class="cert-issuer">CyberVidyaPeeth (2023)</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
